@@ -1,112 +1,85 @@
-# Flight-Reservation-System-
 
-  
-Abstract 
-The Airline Reservation System project focuses on designing and implementing an efficient flight 
-management system that caters to passengers’ reservation needs while optimizing flight operations. This 
-report provides an in-depth analysis of the system’s objectives, design, implementation, functionalities, and 
-outcomes. 
- 
-Contents 
-1 Introduction .............................................................................................................................................. 2 
-1.1 Background .............................................................................................................................................. 2 
-1.2 Objectives and Scope ................................................................................................................................ 2 
-2 System Architecture .................................................................................................................................. 2 
-2.1 System Components ................................................................................................................................. 2 
-2.2 Design Considerations .............................................................................................................................. 2 
-3 Implementation Details ............................................................................................................................ 2 
-3.1 Code Structure.......................................................................................................................................... 2 
-3.2 Key Functions and Algorithms .................................................................................................................. 3 
-4 Results and Discussion ............................................................................................................................. 3 
-4.1 Key Features of the Code ........................................................................................................................... 3 
-4.2 Potential Areas for Improvement .............................................................................................................. 3 
-4.3 Discussion and Conclusion........................................................................................................................ 4 
-5 Conclusion ................................................................................................................................................. 4 
- 
-1 Introduction 
-1.1 Background 
-The airline industry witnesses a continuous surge in passenger traffic, demanding robust systems to streamline 
-flight bookings, manage passenger information, and ensure operational efficiency. The Airline Reservation 
-System project aims to address these requirements by developing a comprehensive system that enhances user 
-experience and optimizes flight operations. 
-1.2 Objectives and Scope 
-The primary objectives include: 
-• Creating an intuitive interface for passengers to make flight reservations securely. 
-• Efficiently managing flight schedules, departure/arrival details, and passenger data. 
-• Enabling easy access to accurate flight information and reservation status. 
-The scope encompasses the development of a user-friendly system catering to passengers’ reservation needs 
-while integrating functionalities for flight management and data security. 
-2 System Architecture 
-2.1 System Components 
-The system architecture encompasses the following key components: 
-• FlightType: Represents flight details including flight number, departure/arrival times, and passenger 
-count. 
-• RouteType: Stores information about flight routes, departure/arrival cities, and day of the trip. 
-• ReservationType: Manages passenger reservations, including trip type, passenger names, and flight 
-routes. 
-• CityType: Contains data regarding cities serviced by the airline, with departure/arrival flight lists and 
-adjacent cities. 
-• FlightNumberListType: Maintains a list of flight numbers and associated flights. 
-2.2 Design Considerations 
-The system design focuses on scalability, reliability, and performance. Utilizing appropriate data structures and 
-algorithms ensures efficient flight data management, passenger booking, and route finding functionalities. 
-3 Implementation Details 
-3.1 Code Structure 
-The implementation is structured around various functional modules: 
-• Flight and City Management: Handles flight information, city connections, and adjacency lists. 
-2 
-• Reservation Handling: Manages passenger reservations, categorizing them based on trip type and 
-associated flights. 
-• Data Display and Algorithms: Implements functions to display flight information, find routes, and 
-provide reservation details. 
-3.2 Key Functions and Algorithms 
-Detailed descriptions of functions: 
-• AddFlightToCityList: Adds flights to departure and arrival lists for respective cities. 
-• AddReservation: Manages the addition of passenger reservations based on sorting criteria. 
-• DijkstraShortestPath: Implements Dijkstra’s algorithm for finding the shortest path between cities. 
-• DFSFindAllRoutes: Implements Depth-First Search to find all possible routes between two cities. 
-4 Results and Discussion 
-4.1 Key Features of the Code 
-The implemented code showcases several key features: Data 
-Structures: 
-• FlightType: Encapsulates flight information such as flight number, origin, destination, departure and 
-arrival times, and passenger count. 
-• CityType: Represents cities within the airline’s network, storing connected flights and adjacent cities 
-essential for route finding. 
-• ReservationType: Manages passenger reservations, storing details like passenger names, trip types, and 
-flight information. 
-• FlightNumberListType: Facilitates maintaining an ordered list of flight numbers for efficient search 
-operations. 
-Functionality: 
-• Flight and City Management: Creation, addition, and display of flight information including departure 
-and arrival details. Presentation of all cities serviced by the airline. Retrieval of cities reachable from a 
-specific city. 
-• Route Finding: Utilization of Dijkstra’s algorithm to determine the shortest path between two cities. 
-Implementation of Depth-First Search (DFS) to identify all feasible routes between two cities. 
-• Passenger Management: Displaying a sorted list of passengers for a given flight, organized by last name. 
-• Departure and Arrival Information: Exhibiting flight departures or arrivals for a city, sorted 
-chronologically by time. 
-4.2 Potential Areas for Improvement 
-The code exhibits strong foundational elements; however, there are areas that can be enhanced: 
-User Input and Interaction: Implementing features for user input would enhance the code’s practicality 
-and usability. This could involve creating interfaces for data entry, reservation making, and query execution. 
-3 
-Error Handling: Integrating comprehensive error handling mechanisms would augment the code’s 
-robustness, addressing potential issues like invalid inputs or data inconsistencies gracefully. 
-Code Organization: Refactoring certain functions into distinct modules could significantly enhance code 
-readability and maintainability, ensuring a more structured and comprehensible codebase. 
-Additional Features: Expansion of functionalities, including reservation creation and cancellation, flight 
-availability checks, passenger information display, fare management, and a user interface implementation (e.g., 
-command-line or graphical), would significantly enrich the system’s capabilities and user experience. 
-4.3 Discussion and Conclusion 
-The implemented code presents a promising foundation for an Airline Reservation System, displaying critical 
-functionalities for flight and passenger management, route finding, and data display. By addressing the 
-identified areas for improvement and incorporating additional features, the system could evolve into a 
-comprehensive and user-friendly application, offering an enhanced reservation experience for both passengers 
-and airline operators. 
-5 Conclusion 
-The Airline Reservation System successfully achieves its defined objectives by providing a robust platform for 
-passengers to make reservations and facilitating efficient flight management. The system’s user-friendly 
-interface, accurate information retrieval, and route optimization contribute to enhanced customer satisfaction 
-and operational effectiveness. 
-4 
+ 	Airline Reservation System
+
+
+1.	Introduction :
+
+The Airline Reservation System is a comprehensive C++ program designed to address the complexities of managing airline operations. This system encapsulates a range of functionalities, including flight scheduling, reservation handling, and passenger information management. Employing an array of data structures, algorithms, and functions, the system aims to provide a robust framework for airlines to streamline their day-to-day operations.
+
+2.	Code Overview:
+
+ Data Structures :
+
+2.1. FlightType Structure:
+   - This structure serves as the backbone for representing individual flights, encapsulating crucial information such as flight number, departure and arrival cities, departure and arrival times, and the number of passengers onboard. Linked lists are employed to efficiently manage the next departure and arrival flights.
+
+2.2. RouteType Structure:
+   - Responsible for encapsulating data related to reservation routes, including the day of reservation, the number of hops, and the flight numbers associated with the route.
+
+2.3. ReservationType Structure:
+   - Manages passenger reservation details, including first and last names, trip types, and reservation routes. A linked list structure is utilized to facilitate the handling of multiple reservations.
+
+2.4. CityType Structure:
+   - Represents a city with a rich set of attributes such as its name, lists of departing and arriving flights, adjacent cities, distance, and the previous city (facilitating pathfinding).
+
+2.5. FlightNumberListType Structure:
+   - This structure efficiently maintains a list of flight numbers and their corresponding flight structures.
+
+3.	Functions :
+
+3.1. MakeFlightNode:
+   - Dynamically creates and initializes a new flight node, providing a flexible mechanism for incorporating new flights into the system.
+
+3.2. InitializeCityList:
+   - Clears the city map, effectively initializing the city list to provide a clean slate for subsequent operations.
+
+3.3. AddFlightToCityList:
+   - Adds a flight to the departure and arrival lists of the respective cities. This function ensures that cities are appropriately updated with the new flight information.
+
+3.4. AddFlightToFlightList:
+   - Incorporates a new flight into the global flight list, maintaining a sorted order based on flight numbers.
+
+3.5. MakeReserveNode:
+   - Dynamically creates and initializes a new reservation node, catering to the diverse needs of passengers and their travel plans.
+
+3.6. AddReservation:
+   - Integrates a new reservation into the reservation list, ensuring proper ordering based on last names and first names.
+
+3.7. DisplayFlightInfo:
+   - Displays detailed information about a specific flight, facilitating a clear understanding of the flight's itinerary.
+
+3.8. DisplayAllFlightsData:
+   - Offers a comprehensive overview of all flights, enabling airline operators to review and manage their entire flight schedule.
+
+3.9. DisplayAllCities:
+   - Provides a concise list of all cities serviced by the airline, aiding in the evaluation of the airline's geographic coverage.
+
+3.10. DisplayCitiesFromCity:
+    - Outputs a list of cities reachable from a specific city, providing valuable insights into potential flight connections.
+
+3.11. FindCityIndex:
+    - Locates the index of a city within the city map, a crucial utility for various operations within the system.
+
+3.12. DijkstraShortestPath:
+    - Implements Dijkstra's algorithm to find the shortest path between two cities, facilitating efficient route planning and optimization.
+
+3.13. DFSFindAllRoutes:
+    - Utilizes Depth-First Search (DFS) to explore and discover all possible routes between two cities, offering a comprehensive perspective on available travel paths.
+
+3.14. PrintPassengersOfFlight:
+    - Prints a list of passengers for a specific flight, ordered by last name. This function aids in managing passenger information efficiently.
+
+3.15. ShowDeparturesForCity:
+    - Displays a list of flight departures from a city, sorted by departure time. This function contributes to providing real-time departure information.
+
+3.16. ShowArrivalsForCity:
+    - Presents a list of flight arrivals at a city, sorted by arrival time. This function assists in monitoring and managing incoming flights effectively.
+
+3.17. main:
+    - The main function orchestrates the entire system, initializing city lists, creating flights, managing reservations, and demonstrating the diverse functionalities of the Airline Reservation System.
+
+4.	Code Execution:
+The program unfolds by initializing the city list, creating flights, and seamlessly integrating them into the city and flight lists. Following this, reservations are handled, and the program showcases various functionalities, including displaying flight information, reservation details, passenger information, city coverage, and route planning.
+
+5.	Conclusion:
+The Airline Reservation System, as presented through this C++ program, represents a robust and extensible solution for managing the intricacies of airline operations. The amalgamation of well-structured data types, efficient algorithms, and user-friendly functions empowers airline operators to efficiently handle flight schedules, reservations, and passenger information. The versatility of the system allows for further expansion and customization to meet the specific needs and requirements of an evolving airline reservation landscape. The codebase serves as a foundation for the development of a sophisticated and comprehensive airline management system.
